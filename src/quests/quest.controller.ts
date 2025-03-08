@@ -11,7 +11,7 @@ export class QuestController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: number): Promise<Quest | undefined> {
+  findOne(@Param('id') id: number): Promise<Quest> {
     return this.questService.findOne(id);
   }
 }

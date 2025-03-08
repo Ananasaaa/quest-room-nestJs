@@ -5,10 +5,11 @@ import { QuestModule } from './quests/quest.module';
 import { OrderModule } from './orders/order.module';
 import { GenreModule } from './genres/genre.module';
 import { ReviewModule } from './reviews/review.module';
+import { PrismaService } from './prisma/prisma.service';
 
 @Module({
   imports: [QuestModule, OrderModule, GenreModule, ReviewModule],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, PrismaService],
 })
 export class AppModule {}
